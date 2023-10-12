@@ -1404,55 +1404,55 @@ class DummyBusinessSeeder extends Seeder
         $admin6 = User::findOrFail(12);
         $admin6->assignRole('Admin#6');
 
-        //Essential Module : Dummy Data
-        $essentials_leave_types = [
-            ['id' => '1', 'leave_type' => 'Sick Leave', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:00:36', 'updated_at' => '2019-08-07 00:00:36'],
-            ['id' => '2', 'leave_type' => 'Vacation Leaves', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:00:49', 'updated_at' => '2019-08-07 00:00:49'],
-            ['id' => '3', 'leave_type' => 'Maternity leave', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:01:11', 'updated_at' => '2019-08-07 00:01:11'],
-            ['id' => '4', 'leave_type' => 'Others', 'max_leave_count' => '1', 'leave_count_interval' => 'month', 'business_id' => '1', 'created_at' => '2019-08-07 00:01:34', 'updated_at' => '2019-08-07 00:01:34'],
-        ];
-        DB::table('essentials_leave_types')->insert($essentials_leave_types);
+        // //Essential Module : Dummy Data
+        // $essentials_leave_types = [
+        //     ['id' => '1', 'leave_type' => 'Sick Leave', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:00:36', 'updated_at' => '2019-08-07 00:00:36'],
+        //     ['id' => '2', 'leave_type' => 'Vacation Leaves', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:00:49', 'updated_at' => '2019-08-07 00:00:49'],
+        //     ['id' => '3', 'leave_type' => 'Maternity leave', 'max_leave_count' => null, 'leave_count_interval' => null, 'business_id' => '1', 'created_at' => '2019-08-07 00:01:11', 'updated_at' => '2019-08-07 00:01:11'],
+        //     ['id' => '4', 'leave_type' => 'Others', 'max_leave_count' => '1', 'leave_count_interval' => 'month', 'business_id' => '1', 'created_at' => '2019-08-07 00:01:34', 'updated_at' => '2019-08-07 00:01:34'],
+        // ];
+        // DB::table('essentials_leave_types')->insert($essentials_leave_types);
 
-        //Repair Module Dummy Data [product/device(categories) added above]
-        $repair_device_models = [
-            ['id' => '1', 'business_id' => '4', 'name' => 'Samsung Galaxy M21', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '24', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:07:24', 'updated_at' => '2020-05-11 12:35:00'],
-            ['id' => '2', 'business_id' => '4', 'name' => 'Samsung Galaxy S20+', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '24', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:08:11', 'updated_at' => '2020-05-11 12:34:34'],
-            ['id' => '3', 'business_id' => '4', 'name' => 'DB43J 43 Inch Full HD Monitor', 'repair_checklist' => '"RAM|Wifi|keyBoard|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:09:15', 'updated_at' => '2020-05-11 12:33:47'],
-            ['id' => '4', 'business_id' => '4', 'name' => 'LS24E510CS 23.5 inch LED Monitor', 'repair_checklist' => '"Keyboard|Ram|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:10:11', 'updated_at' => '2020-05-11 12:33:28'],
-            ['id' => '5', 'business_id' => '4', 'name' => 'Samsung ChromeBook XE50', 'repair_checklist' => '"Camera | Windows | KeyBoard | Mouse | Battery capacity | Ram | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:11:44', 'updated_at' => '2020-05-11 12:30:48'],
-            ['id' => '6', 'business_id' => '4', 'name' => 'Samsung Spin 7 NP730QAA', 'repair_checklist' => '"Battery capacity | Ram | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:12:48', 'updated_at' => '2020-05-11 12:30:18'],
-            ['id' => '7', 'business_id' => '4', 'name' => 'Apple MacBook Pro MVVK2LL', 'repair_checklist' => '"Camera | Windows | KeyBoard | Mouse | Battery capacity | Ram | USB Ports | Graphics"', 'brand_id' => '25', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:13:54', 'updated_at' => '2020-05-11 12:37:44'],
-            ['id' => '8', 'business_id' => '4', 'name' => 'iMac (Retina 5K, 27-inch, 2019)', 'repair_checklist' => '"Keyboard|Ram|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '25', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:14:39', 'updated_at' => '2020-05-11 12:38:06'],
-            ['id' => '9', 'business_id' => '4', 'name' => 'Apple iPhone X', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '25', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:15:38', 'updated_at' => '2020-05-11 12:38:48'],
-        ];
+        // //Repair Module Dummy Data [product/device(categories) added above]
+        // $repair_device_models = [
+        //     ['id' => '1', 'business_id' => '4', 'name' => 'Samsung Galaxy M21', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '24', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:07:24', 'updated_at' => '2020-05-11 12:35:00'],
+        //     ['id' => '2', 'business_id' => '4', 'name' => 'Samsung Galaxy S20+', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '24', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:08:11', 'updated_at' => '2020-05-11 12:34:34'],
+        //     ['id' => '3', 'business_id' => '4', 'name' => 'DB43J 43 Inch Full HD Monitor', 'repair_checklist' => '"RAM|Wifi|keyBoard|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:09:15', 'updated_at' => '2020-05-11 12:33:47'],
+        //     ['id' => '4', 'business_id' => '4', 'name' => 'LS24E510CS 23.5 inch LED Monitor', 'repair_checklist' => '"Keyboard|Ram|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:10:11', 'updated_at' => '2020-05-11 12:33:28'],
+        //     ['id' => '5', 'business_id' => '4', 'name' => 'Samsung ChromeBook XE50', 'repair_checklist' => '"Camera | Windows | KeyBoard | Mouse | Battery capacity | Ram | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:11:44', 'updated_at' => '2020-05-11 12:30:48'],
+        //     ['id' => '6', 'business_id' => '4', 'name' => 'Samsung Spin 7 NP730QAA', 'repair_checklist' => '"Battery capacity | Ram | Mouse | USB Ports | Graphics"', 'brand_id' => '24', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:12:48', 'updated_at' => '2020-05-11 12:30:18'],
+        //     ['id' => '7', 'business_id' => '4', 'name' => 'Apple MacBook Pro MVVK2LL', 'repair_checklist' => '"Camera | Windows | KeyBoard | Mouse | Battery capacity | Ram | USB Ports | Graphics"', 'brand_id' => '25', 'device_id' => '46', 'created_by' => '1', 'created_at' => '2020-05-07 21:13:54', 'updated_at' => '2020-05-11 12:37:44'],
+        //     ['id' => '8', 'business_id' => '4', 'name' => 'iMac (Retina 5K, 27-inch, 2019)', 'repair_checklist' => '"Keyboard|Ram|Sound Quallity | Battery capacity | Mouse | USB Ports | Graphics"', 'brand_id' => '25', 'device_id' => '47', 'created_by' => '1', 'created_at' => '2020-05-07 21:14:39', 'updated_at' => '2020-05-11 12:38:06'],
+        //     ['id' => '9', 'business_id' => '4', 'name' => 'Apple iPhone X', 'repair_checklist' => '"MIC|WiFi|Bluetooth|Sound|Camera|Ram"', 'brand_id' => '25', 'device_id' => '48', 'created_by' => '1', 'created_at' => '2020-05-07 21:15:38', 'updated_at' => '2020-05-11 12:38:48'],
+        // ];
 
-        DB::table('repair_device_models')->insert($repair_device_models);
+        // DB::table('repair_device_models')->insert($repair_device_models);
 
-        $repair_statuses = [
-            ['id' => '1', 'name' => 'Repaired', 'color' => '#3bd914', 'sort_order' => '4', 'business_id' => '4', 'created_at' => '2020-05-07 21:02:40', 'updated_at' => '2020-05-07 21:02:40'],
-            ['id' => '2', 'name' => 'In Progress', 'color' => '#e3b81e', 'sort_order' => '2', 'business_id' => '4', 'created_at' => '2020-05-07 21:03:14', 'updated_at' => '2020-05-07 21:03:14'],
-            ['id' => '3', 'name' => 'Not Started', 'color' => '#e3631b', 'sort_order' => '1', 'business_id' => '4', 'created_at' => '2020-05-07 21:03:43', 'updated_at' => '2020-05-07 21:03:43'],
-            ['id' => '4', 'name' => 'Can\'t be repaired', 'color' => '#f5164b', 'sort_order' => '3', 'business_id' => '4', 'created_at' => '2020-05-07 21:04:10', 'updated_at' => '2020-05-08 10:04:58'],
-        ];
+        // $repair_statuses = [
+        //     ['id' => '1', 'name' => 'Repaired', 'color' => '#3bd914', 'sort_order' => '4', 'business_id' => '4', 'created_at' => '2020-05-07 21:02:40', 'updated_at' => '2020-05-07 21:02:40'],
+        //     ['id' => '2', 'name' => 'In Progress', 'color' => '#e3b81e', 'sort_order' => '2', 'business_id' => '4', 'created_at' => '2020-05-07 21:03:14', 'updated_at' => '2020-05-07 21:03:14'],
+        //     ['id' => '3', 'name' => 'Not Started', 'color' => '#e3631b', 'sort_order' => '1', 'business_id' => '4', 'created_at' => '2020-05-07 21:03:43', 'updated_at' => '2020-05-07 21:03:43'],
+        //     ['id' => '4', 'name' => 'Can\'t be repaired', 'color' => '#f5164b', 'sort_order' => '3', 'business_id' => '4', 'created_at' => '2020-05-07 21:04:10', 'updated_at' => '2020-05-08 10:04:58'],
+        // ];
 
-        DB::table('repair_statuses')->insert($repair_statuses);
+        // DB::table('repair_statuses')->insert($repair_statuses);
 
-        $essentials_shifts = [
-            ['id' => '1', 'name' => 'Morning Shift', 'type' => 'fixed_shift', 'business_id' => '1', 'start_time' => '09:00:00', 'end_time' => '18:00:00', 'holidays' => '["sunday","saturday"]', 'created_at' => '2020-05-11 05:26:56', 'updated_at' => '2020-05-11 21:27:03'],
-            ['id' => '2', 'name' => 'Evening Shift', 'type' => 'flexible_shift', 'business_id' => '1', 'start_time' => null, 'end_time' => null, 'holidays' => '["sunday","saturday"]', 'created_at' => '2020-05-11 05:28:17', 'updated_at' => '2020-05-11 05:28:17'],
-        ];
+        // $essentials_shifts = [
+        //     ['id' => '1', 'name' => 'Morning Shift', 'type' => 'fixed_shift', 'business_id' => '1', 'start_time' => '09:00:00', 'end_time' => '18:00:00', 'holidays' => '["sunday","saturday"]', 'created_at' => '2020-05-11 05:26:56', 'updated_at' => '2020-05-11 21:27:03'],
+        //     ['id' => '2', 'name' => 'Evening Shift', 'type' => 'flexible_shift', 'business_id' => '1', 'start_time' => null, 'end_time' => null, 'holidays' => '["sunday","saturday"]', 'created_at' => '2020-05-11 05:28:17', 'updated_at' => '2020-05-11 05:28:17'],
+        // ];
 
-        DB::table('essentials_shifts')->insert($essentials_shifts);
+        // DB::table('essentials_shifts')->insert($essentials_shifts);
 
-        $essentials_user_shifts = [
-            ['id' => '2', 'user_id' => '3', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:27:50', 'updated_at' => '2020-05-11 21:27:50'],
-            ['id' => '3', 'user_id' => '9', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:27:50', 'updated_at' => '2020-05-11 21:27:50'],
-            ['id' => '5', 'user_id' => '10', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:28:15', 'updated_at' => '2020-05-11 21:28:15'],
-            ['id' => '6', 'user_id' => '11', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:28:15', 'updated_at' => '2020-05-11 21:28:15'],
-            ['id' => '7', 'user_id' => '1', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:29:16', 'updated_at' => '2020-05-11 21:29:16'],
-            ['id' => '8', 'user_id' => '2', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:29:45', 'updated_at' => '2020-05-11 21:29:45'],
-        ];
-        DB::table('essentials_user_shifts')->insert($essentials_user_shifts);
+        // $essentials_user_shifts = [
+        //     ['id' => '2', 'user_id' => '3', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:27:50', 'updated_at' => '2020-05-11 21:27:50'],
+        //     ['id' => '3', 'user_id' => '9', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:27:50', 'updated_at' => '2020-05-11 21:27:50'],
+        //     ['id' => '5', 'user_id' => '10', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:28:15', 'updated_at' => '2020-05-11 21:28:15'],
+        //     ['id' => '6', 'user_id' => '11', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:28:15', 'updated_at' => '2020-05-11 21:28:15'],
+        //     ['id' => '7', 'user_id' => '1', 'essentials_shift_id' => '2', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:29:16', 'updated_at' => '2020-05-11 21:29:16'],
+        //     ['id' => '8', 'user_id' => '2', 'essentials_shift_id' => '1', 'start_date' => $start_of_week, 'end_date' => $end_of_week, 'created_at' => '2020-05-11 21:29:45', 'updated_at' => '2020-05-11 21:29:45'],
+        // ];
+        // DB::table('essentials_user_shifts')->insert($essentials_user_shifts);
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
 

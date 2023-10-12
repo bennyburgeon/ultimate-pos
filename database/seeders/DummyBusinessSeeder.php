@@ -1114,26 +1114,26 @@ class DummyBusinessSeeder extends Seeder
 
         DB::table('notification_templates')->insert($notification_template_array);
 
-        $mfg_recipes = [
-            ['id' => '1', 'product_id' => '81', 'variation_id' => '129', 'instructions' => '<p>Steps for making pizza can be written here ...</p>', 'waste_percent' => '0.00', 'ingredients_cost' => '2660.0000', 'extra_cost' => '10.0000', 'total_quantity' => '1.0000', 'final_price' => '2926.0000', 'sub_unit_id' => '9', 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
-            ['id' => '2', 'product_id' => '93', 'variation_id' => '141', 'instructions' => null, 'waste_percent' => '0.00', 'ingredients_cost' => '31.5000', 'extra_cost' => '10.0000', 'total_quantity' => '1.0000', 'final_price' => '34.6500', 'sub_unit_id' => '9', 'created_at' => '2019-08-18 19:22:40', 'updated_at' => '2019-08-18 19:22:40'],
-        ];
-        DB::table('mfg_recipes')->insert($mfg_recipes);
+        // $mfg_recipes = [
+        //     ['id' => '1', 'product_id' => '81', 'variation_id' => '129', 'instructions' => '<p>Steps for making pizza can be written here ...</p>', 'waste_percent' => '0.00', 'ingredients_cost' => '2660.0000', 'extra_cost' => '10.0000', 'total_quantity' => '1.0000', 'final_price' => '2926.0000', 'sub_unit_id' => '9', 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
+        //     ['id' => '2', 'product_id' => '93', 'variation_id' => '141', 'instructions' => null, 'waste_percent' => '0.00', 'ingredients_cost' => '31.5000', 'extra_cost' => '10.0000', 'total_quantity' => '1.0000', 'final_price' => '34.6500', 'sub_unit_id' => '9', 'created_at' => '2019-08-18 19:22:40', 'updated_at' => '2019-08-18 19:22:40'],
+        // ];
+        // DB::table('mfg_recipes')->insert($mfg_recipes);
 
-        $mfg_recipe_ingredients = [
-            ['id' => '1', 'mfg_recipe_id' => '1', 'variation_id' => '130', 'quantity' => '1.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
-            ['id' => '2', 'mfg_recipe_id' => '1', 'variation_id' => '136', 'quantity' => '20.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
-            ['id' => '3', 'mfg_recipe_id' => '1', 'variation_id' => '135', 'quantity' => '100.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
-            ['id' => '4', 'mfg_recipe_id' => '1', 'variation_id' => '132', 'quantity' => '10.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
-            ['id' => '5', 'mfg_recipe_id' => '1', 'variation_id' => '133', 'quantity' => '20.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:08:13', 'updated_at' => '2019-08-18 19:08:13'],
-            ['id' => '6', 'mfg_recipe_id' => '1', 'variation_id' => '131', 'quantity' => '100.0000', 'waste_percent' => '0.50', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:08:13', 'updated_at' => '2019-08-18 19:08:13'],
-            ['id' => '7', 'mfg_recipe_id' => '2', 'variation_id' => '139', 'quantity' => '6.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
-            ['id' => '8', 'mfg_recipe_id' => '2', 'variation_id' => '138', 'quantity' => '0.5000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
-            ['id' => '9', 'mfg_recipe_id' => '2', 'variation_id' => '140', 'quantity' => '1.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
-            ['id' => '10', 'mfg_recipe_id' => '2', 'variation_id' => '137', 'quantity' => '2.5000', 'waste_percent' => '0.50', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
-        ];
+        // $mfg_recipe_ingredients = [
+        //     ['id' => '1', 'mfg_recipe_id' => '1', 'variation_id' => '130', 'quantity' => '1.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
+        //     ['id' => '2', 'mfg_recipe_id' => '1', 'variation_id' => '136', 'quantity' => '20.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
+        //     ['id' => '3', 'mfg_recipe_id' => '1', 'variation_id' => '135', 'quantity' => '100.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
+        //     ['id' => '4', 'mfg_recipe_id' => '1', 'variation_id' => '132', 'quantity' => '10.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:05:09', 'updated_at' => '2019-08-18 19:08:12'],
+        //     ['id' => '5', 'mfg_recipe_id' => '1', 'variation_id' => '133', 'quantity' => '20.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:08:13', 'updated_at' => '2019-08-18 19:08:13'],
+        //     ['id' => '6', 'mfg_recipe_id' => '1', 'variation_id' => '131', 'quantity' => '100.0000', 'waste_percent' => '0.50', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:08:13', 'updated_at' => '2019-08-18 19:08:13'],
+        //     ['id' => '7', 'mfg_recipe_id' => '2', 'variation_id' => '139', 'quantity' => '6.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
+        //     ['id' => '8', 'mfg_recipe_id' => '2', 'variation_id' => '138', 'quantity' => '0.5000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
+        //     ['id' => '9', 'mfg_recipe_id' => '2', 'variation_id' => '140', 'quantity' => '1.0000', 'waste_percent' => '0.00', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
+        //     ['id' => '10', 'mfg_recipe_id' => '2', 'variation_id' => '137', 'quantity' => '2.5000', 'waste_percent' => '0.50', 'sub_unit_id' => null, 'created_at' => '2019-08-18 19:22:41', 'updated_at' => '2019-08-18 19:22:41'],
+        // ];
 
-        DB::table('mfg_recipe_ingredients')->insert($mfg_recipe_ingredients);
+        // DB::table('mfg_recipe_ingredients')->insert($mfg_recipe_ingredients);
 
         $product_locations = [
             ['product_id' => '1', 'location_id' => '1'],
